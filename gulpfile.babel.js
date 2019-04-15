@@ -27,6 +27,7 @@ import plumber from "gulp-plumber";
 import debug from "gulp-debug";
 import clean from "gulp-clean";
 import yargs from "yargs";
+import svgstore from "gulp-svgstore";
 
 const webpackConfig = require("./webpack.config.js"),
 	argv = yargs.argv,
@@ -211,6 +212,14 @@ export const scripts = () => gulp.src(paths.scripts.src)
 	}))
 .on("end", browsersync.reload);
 
+export const sprite = () => {
+	return gulp
+	  .src('./src/img/icons/icon-*.svg')
+	  .pipe(svgstore({ inlineSvg: true }))
+	  .pipe(rename('sprite.svg'))
+	  .pipe(gulp.dest('./dist/img'));
+  };
+
 export const images = () => gulp.src(paths.images.src)
 	.pipe(gulpif(production, imagemin([
 		imageminGiflossy({
@@ -285,9 +294,9 @@ export const favs = () => gulp.src(paths.favicons.src)
 	}));
 
 export const development = gulp.series(cleanFiles, smartGrid,
-	gulp.parallel(views, styles, scripts, images, webpimages, fonts, favs),
+	gulp.parallel(views, styles, scripts, sprite, images, webpimages, fonts, favs),
 	gulp.parallel(server));
 
-export const prod = gulp.series(cleanFiles, smartGrid, serverConfig, views, styles, scripts, images, webpimages, fonts, favs);
+export const prod = gulp.series(cleanFiles, smartGrid, serverConfig, views, styles, scripts, sprite, images, webpimages, fonts, favs);
 
 export default development;

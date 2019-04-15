@@ -1,0 +1,48 @@
+.about-agency {
+    background-color: #11749e;
+    color: #fff;
+    position: relative;
+
+
+    &__title {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 38px;
+
+        &::before {
+            content:"W";
+            position: absolute;
+            top: -120px;
+            left: 25%;
+            font-size: 250px;
+            text-align: center;
+            opacity: 0.5;
+        }
+    }
+}
+
+.articles {
+    padding-top: 345px;
+    display: flex;
+    align-items: center;
+
+    .article {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 133px;
+            height: 133px;
+        }
+
+        .edit {
+            background-image: url(../../img/icon-edit.svg);
+        }
+    }
+}
