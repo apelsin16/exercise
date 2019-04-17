@@ -1,0 +1,33 @@
+.blog {
+    background-color: #fff;
+    color:#222;
+
+    &__title {
+        text-transform: uppercase;
+
+        &::before {
+           content: 'B';
+           left: 15%;
+        }
+    }
+
+    &__text {
+        padding-top: 345px;
+        padding-bottom: 75px;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+.articles {
+    &--blog {
+    padding-top: 0;    
+    }
+
+    .article {
+        &__title--blog {
+            color: #11749e;
+        } 
+    }
+}
+

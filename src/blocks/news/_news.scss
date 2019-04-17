@@ -1,0 +1,66 @@
+.news {
+    .row {
+        padding-top: 80px;
+        padding-bottom: 90px;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        font-family: "gothem_book";
+        
+        &--first {
+            background-position: top right;
+            background-image: url(../../img/news1.png);
+            background-color: #222222;  
+            color: #fff;         
+        }
+
+        &--second {
+            background-position: top left;
+            background-image: url(../../img/news2.png);
+            background-color: #f3f3f3;
+            color: #222;
+        }
+    }
+    &-article {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        &--second {
+            margin-left: 55%;
+
+            .news-article__date {
+                &::after {
+                    background-color: #222;
+                }
+            }
+        }
+        
+        &__property {
+            font-size: 13px;
+        }
+
+        &__date {
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 1px;
+                height: 12px;
+                background-color: #fff;
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+        }
+
+        &__title {
+            font-size: 25px;
+            margin-top: 18px;
+            margin-bottom: 18px;
+        }
+
+        &__text {
+            width: 470px;
+            font-size: 15px;
+        }
+    }
+
+
+}

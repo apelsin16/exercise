@@ -1,8 +1,7 @@
-.about-agency {
+.section {
     background-color: #11749e;
     color: #fff;
     position: relative;
-
 
     &__title {
         position: absolute;
@@ -12,7 +11,6 @@
         font-size: 38px;
 
         &::before {
-            content:"W";
             position: absolute;
             top: -120px;
             left: 25%;
@@ -23,10 +21,21 @@
     }
 }
 
+.about-agency {
+    &__title {
+        &::before {
+           content: 'W'
+        }
+    }
+}
+
 .articles {
     padding-top: 345px;
     display: flex;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 126px;
 
     .article {
         padding: 15px;
@@ -34,15 +43,46 @@
         flex-direction: column;
         align-items: center;
 
-        &::before {
+        &--before::before {
             content: '';
             display: block;
             width: 133px;
             height: 133px;
+            background-color: #2e85aa;
+            border-radius: 50%;
+            margin-bottom: 24px;
+            background-size: 30%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            
+        }
+        
+        
+        
+        &__title {
+            text-transform: uppercase;
+            font-size: 18px;
         }
 
-        .edit {
-            background-image: url(../../img/icon-edit.svg);
+        &__text {
+            font-family: "gothem_book";
+            font-size: 15px;
+            text-align: center;
+            line-height: 24px;
         }
     }
 }
+
+.edit::before {
+    background-image: url(../../img/icon-edit.svg);
+}
+
+.magnifying-glass::before {
+    background-image: url(../../img/icon-magnifying-glass.svg);
+}
+
+.comment::before {
+    background-image: url(../../img/icon-comment.svg);
+}
+
+
