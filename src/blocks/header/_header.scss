@@ -111,12 +111,17 @@
     }
 
     &__button {
+        display: block;
         width: 64px;
         height: 64px;
+        margin: 0 auto;
         background-color: inherit;
         border: 1px solid #fff;
         border-radius: 50%;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__icon {

@@ -1,0 +1,11 @@
+.wrapper {
+    background-color: #222222;
+    padding: 50px;
+    
+    .footer {
+        @include container();
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+    }
+}

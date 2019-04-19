@@ -1,12 +1,11 @@
 .news {
     .row {
-        padding-top: 80px;
-        padding-bottom: 90px;
-        background-repeat: no-repeat;
-        background-size: 50%;
-        font-family: "gothem_book";
-        
         &--first {
+            padding-top: 80px;
+            padding-bottom: 90px;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            font-family: "gothem_book";
             background-position: top right;
             background-image: url(../../img/news1.png);
             background-color: #222222;  
@@ -14,6 +13,11 @@
         }
 
         &--second {
+            padding-top: 80px;
+            padding-bottom: 90px;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            font-family: "gothem_book";
             background-position: top left;
             background-image: url(../../img/news2.png);
             background-color: #f3f3f3;
