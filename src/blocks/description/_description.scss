@@ -34,7 +34,7 @@
             width: 70px;
             height: 70px;
             margin-right: 30px;
-            background-image: url(../../img/icon-edit.svg);
+            background-image: url(../img/icon-edit.svg);
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -42,7 +42,7 @@
 }   
 
 .key-feature {
-    background-image: url(../../img/bg-key.png);
+    background-image: url(../img/bg-key.png);
     background-repeat: no-repeat;
 
     .text-area {
@@ -93,7 +93,7 @@
     .phone {
         @include col();
         @include size(6);
-        background-image: url(../../img/phone.png);
+        background-image: url(../img/phone.png);
         background-size: 60%;
         background-repeat: no-repeat;
         background-position: center center;
