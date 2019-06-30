@@ -20,8 +20,10 @@
 }
 
 .articles {
+     
     &--blog {
-    padding-top: 0;    
+    padding-top: 0;  
+
     }
 
     .article {
@@ -32,3 +34,10 @@
     }
 }
 
+
+@media (max-width: 648px) {
+    .blog__text {
+        padding-top: 200px;
+        padding-bottom: 0;
+    } 
+}

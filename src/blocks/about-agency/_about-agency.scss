@@ -9,6 +9,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 38px;
+        width: 540px;
+        margin: auto;
 
         &::before {
             position: absolute;
@@ -31,17 +33,20 @@
 
 .articles {
     padding-top: 345px;
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
     padding-bottom: 126px;
+    align-items: center;
+    // max-width: 1200px;
+    justify-content: space-between;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; 
 
     .article {
         padding: 15px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; 
+        flex-basis: 20%;
 
         &--before::before {
             content: '';
@@ -85,4 +90,62 @@
     background-image: url(../img/icon-comment.svg);
 }
 
+@media (max-width: 968px) {
+    .articles{
+        padding-bottom: 60px;
+    }
+}
 
+@media (max-width: 648px) {
+    .articles {
+        padding-top: 200px;
+
+        .article {
+            flex-basis: 42%;
+        }
+    }
+    .section__title {
+        font-size: 30px;
+        text-align: center;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .articles{
+        flex-wrap: wrap;        
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        
+    
+        &__title {
+            
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+
+    .about-agency {
+        &__title {
+            &::before {
+               display: none;
+               content: '';
+            }
+        }
+    }
+}
+
+@media (max-width: 601px) {
+    .articles {    
+        .article {
+            flex-basis: 100%;
+        }
+    }
+
+}

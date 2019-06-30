@@ -99,3 +99,29 @@
         background-position: center center;
     }
 }
+
+@media (max-width: 1200px) {
+    .description {
+        .info {
+            @include col();
+            @include size(12);
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .description {
+        .info {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 998px) {
+    .phone {
+        display: none;
+    }
+}

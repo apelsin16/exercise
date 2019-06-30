@@ -57,3 +57,11 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .team__article {
+        @include col();
+        @include size(6);
+        margin-bottom: 25px;
+    }
+}
